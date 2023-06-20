@@ -6,7 +6,7 @@
 
 import p5 from "p5";
 
-export const kakuninyo = (p: p5) => {
+export const mouseInput = (p: p5) => {
     const w = 480; //window.innerWidth;
     const h = 240; //window.innerHeight;
     function setup() {

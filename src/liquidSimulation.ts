@@ -1,6 +1,6 @@
 import p5 from "p5";
 
-export const physics = (p: p5) => {
+export const liquidSimulation = (p: p5) => {
     class Liquid {
         x: number;
         y: number;
@@ -77,6 +77,7 @@ export const physics = (p: p5) => {
         }
     }
 
+    //main
     const w = 480;
     const h = 360;
     const movers: Mover[] = [];
@@ -88,6 +89,9 @@ export const physics = (p: p5) => {
     }
     function draw() {
         p.background(192);
+        p.noStroke();
+        p.fill(255);
+        p.text("liquid simulation", 16, 16);
         liquid.display();
         for (let i = 0; i < movers.length; i++) {
             if (liquid.contains(movers[i])) {
